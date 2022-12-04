@@ -6,7 +6,7 @@ module Multiplexador(
 	input [1:0] selecao,
 	output reg [15:0] saida);
 
-	always @ (x or a or b or c or selecao) begin
+	always @ (posedge x or a or b or c or selecao) begin
 		case (selecao)
 			2'b00: saida = x;
 			2'b01: saida = a;

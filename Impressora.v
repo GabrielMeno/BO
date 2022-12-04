@@ -5,7 +5,7 @@ module Impressora(
 	output reg[6:0] HEX1,
 	output reg[6:0] HEX0);
 	
-	always @ (valor) begin
+	always @ (posedge valor) begin
 		if (valor <= 9999) begin
 			reg[15:0] unidade;
 			reg[15:0] dezena;
